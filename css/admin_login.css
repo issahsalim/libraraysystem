@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(209, 209, 209);
+
+}
+
+#adminInput {
+    padding: 10px;
+    width: 12rem;
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    outline: none;
+    background-color: rgb(219, 219, 219);
+}
+
+.forms {
+    padding: 5rem 12rem;
+    margin-top: 40px;
+    max-width: 10rem;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px rgb(102, 102, 102);
+}
+
+#adminInput[placeholder] {
+    color: rgb(100, 100, 100);
+}
+
+ 

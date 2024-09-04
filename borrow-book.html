@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrow Book</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+            <link rel="shortcut icon" href="images/9.ico" type="image/x-icon">
+
+</head>
+<body>
+
+<!-- nav Bar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand text-dark fw-bold" href="index.html">Library Management</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> 
+
+        <div class="collapse navbar-collapse " id="navbarNavDropdown"> 
+            <ul class="navbar-nav mx-auto  ">
+                <li class="nav-item">
+                    <a class="nav-link active text-dark" aria-current="page" href="home.html">Home</a>
+                </li> 
+
+                <li class="nav-item"> 
+                    <a class="nav-link text-dark" href="admin_login.html">Admin</a>    
+                </li> 
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Student
+                    </a>
+                    <ul class="dropdown-menu"> 
+                        <li><a class="dropdown-item" href="borrow-book.html">Borrow Book</a></li>
+                        <li><a class="dropdown-item" href="return-book.html">Return Book</a></li>
+                     </ul> 
+                </li> 
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Borrow Book</h1>
+        <div class="d-flex justify-content-center">
+        <div class="form-group col-6 m-4">
+            <input type="text" class="form-control" id="searchInput" placeholder="Search by title or ISBN">
+        </div>
+        </div>
+        <div id="bookList" class="row">
+            <!-- where books will display when added by fucken admin -->
+        </div>
+    </div>
+
+    <!-- Borrow Book Modal -->
+    <div class="modal fade" id="borrowBookModal" tabindex="-1" aria-labelledby="borrowBookModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="borrowBookModalLabel">Borrow Book</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="borrowBookForm">
+                        <div class="form-group mb-4"> 
+                            <label for="borrowUserId">User ID</label> 
+                            <input type="text" class="form-control" id="borrowUserId" placeholder="Enter your User ID"
+                                required> 
+                        </div> 
+                        <button type="submit" class="btn btn-primary">Borrow</button>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/borrow-book.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+</html>

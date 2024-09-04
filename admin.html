@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <link rel="shortcut icon" href="images/9.ico" type="image/x-icon">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Admin Dashboard</a>
+        <div class="mx-auto">
+            <a class="nav-link text-light" href="home.html">Home</a>
+        </div> 
+    </nav> 
+<div class="text-center m-4">
+            <a href="add-book.html" class="btn btn-primary btn-lg">Add New Book</a>
+        </div>
+    <div class="container mt-3 mb-4">
+        <h2 class="text-center mb-4">Borrowed Books</h2>
+        <div class="card">
+            <div class="card-header">
+                Currently Borrowed
+            </div>
+            <ul id="borrowedBooksList" class="list-group list-group-flush">
+                <!-- Borrowed books will render here -->
+            </ul>
+        </div>
+        
+        <h2 class="text-center mt-5 mb-4">Returned Books</h2> 
+        <div class="card">
+            <div class="card-header ">
+                Returned Books
+            </div>
+            <ul id="returnedBooksList" class="list-group list-group-flush">
+                <!-- Returned books will render here -->
+            </ul>
+        </div>
+    </div>
+
+   
+ <script src="js/admin.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
